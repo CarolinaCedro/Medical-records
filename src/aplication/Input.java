@@ -2,13 +2,15 @@ package aplication;
 
 import entities.Patient;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Input {
 
     Patient pacient;
-
+    List<Patient> patientList = new ArrayList<>();
 
     public void inputData() {
 
@@ -21,7 +23,7 @@ public class Input {
         int age = sc.nextInt();
 
         System.out.println("Data Nascimento: ");
-        int birthDate = sc.nextInt();
+        String birthDate = sc.nextLine();
 
         System.out.println("Peso: ");
         double weigth = sc.nextDouble();
@@ -39,41 +41,43 @@ public class Input {
         String bloodType = sc.nextLine();
 
         System.out.println("Frequencia Cardiaca: ");
-        int heartRate = sc.nextInt();
+        double heartRate = sc.nextDouble();
 
         System.out.println("Ja teve Hepatite B: ");
-        int hepatitisB = sc.nextInt();
+        String hepatitisB = sc.next();
 
-        System.out.println("Ja teve AVC (s/n)? ");
-        int avc = sc.nextInt();
+        System.out.println("Ja teve AVC (sim)/(não)? ");
+        String avc = sc.next();
 
-        System.out.println("Tem pressão alta (s/n)?");
-        int highpressure = sc.nextInt();
+        System.out.println("Tem pressão alta (sim)/(não)?");
+        String highpressure = sc.next();
 
-        System.out.println("Gestante (s/n)?");
-        int pregnant = sc.nextInt();
+        System.out.println("Gestante (sim)/(não)?");
+        String pregnant = sc.next();
 
-        System.out.println("Tem diabete (s/n)?");
-        int diabetes = sc.nextInt();
+        System.out.println("Tem diabete (sim)/(não)?");
+        String diabetes = sc.next();
 
-        System.out.println("Já teve enfarte (s/n)?");
-        int infarction = sc.nextInt();
+        System.out.println("Já teve enfarte (sim)/(não)?");
+        String infarction = sc.next();
 
-        System.out.println("Já teve Trombose (s/n)?");
-        int thrombosis = sc.nextInt();
+        System.out.println("Já teve Trombose (sim)/(não)?");
+        String thrombosis = sc.next();
 
-        System.out.println("Esta tomando algum remedio (s/n)?");
-        int medical = sc.nextInt();
+        System.out.println("Esta tomando algum remedio (sim)/(não)?");
+        String medical = sc.next();
 
-        System.out.println("Possui algum tipo de alergia em relação a algum medicamento ou alimentação (s/n) ? ");
-        int alergy = sc.nextInt();
+        System.out.println("Possui algum tipo de alergia em relação a algum medicamento ou alimentação  (sim)/(não)? ");
+        String alergy = sc.next();
 
-        System.out.println("Tem algum tipo de doença que esta fazendo tratamento (s/n) ? ");
-        int diseaseTreatment = sc.nextInt();
+        System.out.println("Tem algum tipo de doença que esta fazendo tratamento  (sim)/(não)? ");
+        String diseaseTreatment = sc.next();
 
-        System.out.println("Necessidades especificas de alimentação (s/n) ? ");
-        int alimentationEspecial = sc.nextInt();
+        System.out.println("Necessidades especificas de alimentação  (sim)/(não)? ");
+        String alimentationEspecial = sc.next();
 
+        pacient = new Patient(fullName,age,birthDate,id,bloodPressure,bloodType,heartRate,weigth,height,hepatitisB,avc,highpressure,diabetes,infarction,thrombosis,pregnant);
+        patientList.add(pacient);
 
         System.out.println("Em caso de alguma emergência avisar a: ");
         System.out.println("Nome completo: ");
@@ -88,12 +92,6 @@ public class Input {
         String phoneParent = sc.nextLine();
         System.out.println("e-mail: ");
         String emailParent = sc.nextLine();
-
-
-
-        System.out.println("Declaro para todos os devidos fins expressar a verdade nas informações acimas preenchidas (s/n)?");
-        int afirmationData = sc.nextInt();
-
 
 
     }

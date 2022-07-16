@@ -4,26 +4,33 @@ public class Patient {
 
     private String FullName;
     private Integer Age;
-    private Integer BirthDate;
+    private String BirthDate;
     private Integer Id;
     private Double BloodPressure;
     private String BloodType;
     private Double HeartRate;
     private Double Weigth;
     private Double Height;
-    private Double HepatitisB;
-    private Double AVC;
-    private Double Highpressure;
-    private Double Diabetes;
-    private Double Infarction;
-    private Double Thrombosis;
-    private Double Pregnant;
+    private String HepatitisB;
+    private String AVC;
+    private String Highpressure;
+    private String Diabetes;
+    private String Infarction;
+    private String Thrombosis;
+    private String Pregnant;
+    private String nameParent;
+    private String adressParent;
+    private String grauParent;
+    private String phoneResidencialParent;
+    private String phoneParent;
+    private String emailParent;
+    private String afirmationData;
 
 
     public Patient() {
     }
 
-    public Patient(String fullName, Integer age, Integer birthDate, Integer id, Double bloodPressure, String bloodType, Double heartRate, Double weigth, Double height, Double hepatitisB, Double AVC, Double highpressure, Double diabetes, Double infarction, Double thrombosis, Double pregnant) {
+    public Patient(String fullName, Integer age, String birthDate, Integer id, Double bloodPressure, String bloodType, Double heartRate, Double weigth, Double height, String hepatitisB, String AVC, String highpressure, String diabetes, String infarction, String thrombosis, String pregnant) {
         FullName = fullName;
         Age = age;
         BirthDate = birthDate;
@@ -40,6 +47,17 @@ public class Patient {
         Infarction = infarction;
         Thrombosis = thrombosis;
         Pregnant = pregnant;
+
+    }
+
+    public Patient(String nameParent, String adressParent, String grauParent, String phoneResidencialParent, String phoneParent, String emailParent, String afirmationData) {
+        this.nameParent = nameParent;
+        this.adressParent = adressParent;
+        this.grauParent = grauParent;
+        this.phoneResidencialParent = phoneResidencialParent;
+        this.phoneParent = phoneParent;
+        this.emailParent = emailParent;
+        this.afirmationData = afirmationData;
     }
 
     public String getFullName() {
@@ -58,11 +76,11 @@ public class Patient {
         Age = age;
     }
 
-    public Integer getBirthDate() {
+    public String getBirthDate() {
         return BirthDate;
     }
 
-    public void setBirthDate(Integer birthDate) {
+    public void setBirthDate(String birthDate) {
         BirthDate = birthDate;
     }
 
@@ -114,59 +132,59 @@ public class Patient {
         Height = height;
     }
 
-    public Double getHepatitisB() {
+    public String getHepatitisB() {
         return HepatitisB;
     }
 
-    public void setHepatitisB(Double hepatitisB) {
+    public void setHepatitisB(String hepatitisB) {
         HepatitisB = hepatitisB;
     }
 
-    public Double getAVC() {
+    public String getAVC() {
         return AVC;
     }
 
-    public void setAVC(Double AVC) {
+    public void setAVC(String AVC) {
         this.AVC = AVC;
     }
 
-    public Double getHighpressure() {
+    public String getHighpressure() {
         return Highpressure;
     }
 
-    public void setHighpressure(Double highpressure) {
+    public void setHighpressure(String highpressure) {
         Highpressure = highpressure;
     }
 
-    public Double getDiabetes() {
+    public String getDiabetes() {
         return Diabetes;
     }
 
-    public void setDiabetes(Double diabetes) {
+    public void setDiabetes(String diabetes) {
         Diabetes = diabetes;
     }
 
-    public Double getInfarction() {
+    public String getInfarction() {
         return Infarction;
     }
 
-    public void setInfarction(Double infarction) {
+    public void setInfarction(String infarction) {
         Infarction = infarction;
     }
 
-    public Double getThrombosis() {
+    public String getThrombosis() {
         return Thrombosis;
     }
 
-    public void setThrombosis(Double thrombosis) {
+    public void setThrombosis(String thrombosis) {
         Thrombosis = thrombosis;
     }
 
-    public Double getPregnant() {
+    public String getPregnant() {
         return Pregnant;
     }
 
-    public void setPregnant(Double pregnant) {
+    public void setPregnant(String pregnant) {
         Pregnant = pregnant;
     }
 }
