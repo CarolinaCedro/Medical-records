@@ -11,7 +11,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         Patient pacient;
+        Input inputData = new Input();
 
-
+        inputData.inputData();
     }
 }
