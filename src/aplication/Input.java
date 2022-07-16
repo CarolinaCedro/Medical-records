@@ -90,6 +90,7 @@ public class Input {
         String emailParent = sc.nextLine();
 
 
+
         System.out.println("Declaro para todos os devidos fins expressar a verdade nas informações acimas preenchidas (s/n)?");
         int afirmationData = sc.nextInt();
 
