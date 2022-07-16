@@ -22,6 +22,7 @@ public class Input {
         System.out.println("Idade: ");
         int age = sc.nextInt();
 
+        sc.nextLine();
         System.out.println("Data Nascimento: ");
         String birthDate = sc.nextLine();
 
@@ -37,12 +38,14 @@ public class Input {
         System.out.println("Pressao arterial: ");
         double bloodPressure = sc.nextDouble();
 
+        sc.nextLine();
         System.out.println("Tipo Sanguíneo: ");
         String bloodType = sc.nextLine();
 
         System.out.println("Frequencia Cardiaca: ");
         double heartRate = sc.nextDouble();
 
+        sc.nextLine();
         System.out.println("Ja teve Hepatite B: ");
         String hepatitisB = sc.next();
 
@@ -76,10 +79,9 @@ public class Input {
         System.out.println("Necessidades especificas de alimentação  (sim)/(não)? ");
         String alimentationEspecial = sc.next();
 
-        pacient = new Patient(fullName,age,birthDate,id,bloodPressure,bloodType,heartRate,weigth,height,hepatitisB,avc,highpressure,diabetes,infarction,thrombosis,pregnant);
-        patientList.add(pacient);
 
         System.out.println("Em caso de alguma emergência avisar a: ");
+        sc.nextLine();
         System.out.println("Nome completo: ");
         String nameParent = sc.nextLine();
         System.out.println("Endereço: ");
@@ -93,6 +95,13 @@ public class Input {
         System.out.println("e-mail: ");
         String emailParent = sc.nextLine();
 
+        pacient = new Patient(fullName, age, birthDate, id, bloodPressure, bloodType, heartRate, weigth, height, hepatitisB, avc, highpressure, diabetes, infarction, thrombosis, pregnant, nameParent, adressParent, grauParent, phoneResidencialParent, phoneParent, emailParent);
+        patientList.add(pacient);
+        System.out.println();
 
+        for (Patient results : patientList
+        ) {
+            System.out.println(results);
+        }
     }
 }

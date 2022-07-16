@@ -30,7 +30,7 @@ public class Patient {
     public Patient() {
     }
 
-    public Patient(String fullName, Integer age, String birthDate, Integer id, Double bloodPressure, String bloodType, Double heartRate, Double weigth, Double height, String hepatitisB, String AVC, String highpressure, String diabetes, String infarction, String thrombosis, String pregnant) {
+    public Patient(String fullName, Integer age, String birthDate, Integer id, Double bloodPressure, String bloodType, Double heartRate, Double weigth, Double height, String hepatitisB, String AVC, String highpressure, String diabetes, String infarction, String thrombosis, String pregnant, String nameParent, String adressParent, String grauParent, String phoneResidencialParent, String phoneParent, String emailParent) {
         FullName = fullName;
         Age = age;
         BirthDate = birthDate;
@@ -47,18 +47,15 @@ public class Patient {
         Infarction = infarction;
         Thrombosis = thrombosis;
         Pregnant = pregnant;
-
-    }
-
-    public Patient(String nameParent, String adressParent, String grauParent, String phoneResidencialParent, String phoneParent, String emailParent, String afirmationData) {
         this.nameParent = nameParent;
         this.adressParent = adressParent;
         this.grauParent = grauParent;
         this.phoneResidencialParent = phoneResidencialParent;
         this.phoneParent = phoneParent;
         this.emailParent = emailParent;
-        this.afirmationData = afirmationData;
+
     }
+
 
     public String getFullName() {
         return FullName;
@@ -186,5 +183,32 @@ public class Patient {
 
     public void setPregnant(String pregnant) {
         Pregnant = pregnant;
+    }
+
+    @Override
+    public String toString() {
+        return "------ Ficha Medica ---- " + "\n" +
+                "Nome completo = " + FullName + "\n" +
+                "Idade = " + Age + "\n" +
+                "Aniversario = " + BirthDate + "\n" +
+                "Cpf = " + Id + "\n" +
+                "Pressão arterial = " + BloodPressure + "\n" +
+                "Tipo Sanguíneo = " + BloodType + "\n" +
+                "Frequência Cardiaca = " + HeartRate + "\n" +
+                "Peso = " + Weigth + "\n" +
+                "Altura = " + Height + "\n" +
+                "Hepatite B = " + HepatitisB + "\n" +
+                "Já teve AVC = " + AVC + "\n" +
+                "Pressão alta = " + Highpressure + "\n" +
+                "Diabetes = " + Diabetes + "\n" +
+                "Infarto = " + Infarction + "\n" +
+                "Trombose = " + Thrombosis + "\n" +
+                "Gravida = " + Pregnant + "\n" +
+                "Nome Parente responsavél = " + nameParent + "\n" +
+                "Endereço = " + adressParent + "\n" +
+                "Grau de = " + grauParent + "\n" +
+                "Telefone residêncial parente = " + phoneResidencialParent + "\n" +
+                "Telefone pessoal parente = " + phoneParent + "\n" +
+                "e-mail parente = " + emailParent + "\n";
     }
 }
