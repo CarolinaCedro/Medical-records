@@ -95,5 +95,6 @@ public class Input {
         int afirmationData = sc.nextInt();
 
 
+
     }
 }
